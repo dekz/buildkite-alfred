@@ -4,6 +4,6 @@
     "dependencies": {
         "alfred-workflow-nodejs": "^1.1.0",
         "request-json": "^0.5.3",
-        "sugar": "^1.4.1",
+        "sugar": "^1.4.1"
     }
 }

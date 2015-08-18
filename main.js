@@ -41,13 +41,17 @@ var alfred_key = "buildkite-workflow-data";
       client.get('projects?per_page=100', function(err, res, body) { cb(body) });
     }
 
+    var save_items = function(items) {
+      settings.set(alfred_key, JSON.stringify(items));
+    }
+
     var data = settings.get(alfred_key);
 
     actionHandler.onAction("update-projects", function(query) {
       get_items(function(items) {
         settings.remove(alfred_key);
         console.log(items);
-        settings.set(alfred_key, JSON.stringify(items));
+        save_items(items);
       });
     });
 
@@ -56,6 +60,7 @@ var alfred_key = "buildkite-workflow-data";
         handle_items(JSON.parse(data), query);
       } else {
         get_items(function(items) {
+          save_items(items);
           handle_items(items, query);
         });
       }
