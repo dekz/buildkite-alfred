@@ -53,7 +53,7 @@
 	<key>createdby</key>
 	<string>Jacob Evans</string>
 	<key>description</key>
-	<string></string>
+	<string>Buildkite Workflow</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -205,6 +205,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/dekz/buildkite-alfred</string>
 </dict>
 </plist>
